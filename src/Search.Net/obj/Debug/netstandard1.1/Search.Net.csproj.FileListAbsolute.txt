@@ -1,0 +1,9 @@
+C:\Git\Search.Net\src\Search.Net\bin\Debug\netstandard1.1\Search.Net.deps.json
+C:\Git\Search.Net\src\Search.Net\bin\Debug\netstandard1.1\Search.Net.dll
+C:\Git\Search.Net\src\Search.Net\bin\Debug\netstandard1.1\Search.Net.pdb
+C:\Git\Search.Net\src\Search.Net\obj\Debug\netstandard1.1\Search.Net.csprojAssemblyReference.cache
+C:\Git\Search.Net\src\Search.Net\obj\Debug\netstandard1.1\Search.Net.csproj.CoreCompileInputs.cache
+C:\Git\Search.Net\src\Search.Net\obj\Debug\netstandard1.1\Search.Net.AssemblyInfoInputs.cache
+C:\Git\Search.Net\src\Search.Net\obj\Debug\netstandard1.1\Search.Net.AssemblyInfo.cs
+C:\Git\Search.Net\src\Search.Net\obj\Debug\netstandard1.1\Search.Net.dll
+C:\Git\Search.Net\src\Search.Net\obj\Debug\netstandard1.1\Search.Net.pdb
