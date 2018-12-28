@@ -2,13 +2,11 @@
 {
     readonly public struct Leaf<T>
     {
-        public Leaf(ushort Char, DataLeaf<T>[] dataLeaves)
-        {
-            this.Char = Char;
+        public Leaf(ref DataLeaf<T>[] dataLeaves){
             DataLeaves = dataLeaves;
         }
 
-        public ushort Char { get; }
-        public DataLeaf<T>[] DataLeaves { get; }
+        private DataLeaf<T>[] DataLeaves { get; }
+        public ref readonly DataLeaf<T> this[ushort Char] => ref DataLeaves[Char - 97];
     }
 }

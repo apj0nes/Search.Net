@@ -18,16 +18,18 @@ namespace Search.Net.Tests
                     {
                         dataLeaves[level3Char - 97] = new DataLeaf<int>(level3Char);
                     }
-                    leaves[level2Char - 97] = new Leaf<int>(level2Char, dataLeaves);
+                    leaves[level2Char - 97] = new Leaf<int>(ref dataLeaves);
                 }
-                nodes[level1Char - 97] = new Node<int>(level1Char, leaves);
+                nodes[level1Char - 97] = new Node<int>(ref leaves);
             }
 
-            var trigramTree = new Root<int>(nodes);
+            var trigramTree = new Root<int>(ref nodes);
 
-            trigramTree.ChildNodes[0].Leaves[0].DataLeaves[0].Data.Add(1);
+            var test = trigramTree['a']['a']['a'].Data;
 
-            Assert.Contains(1, trigramTree.ChildNodes[0].Leaves[0].DataLeaves[0].Data);
+            trigramTree['a']['a']['a'].Data.Add(1);
+
+            Assert.Contains(1, trigramTree['a']['a']['a'].Data);
         }
     }
 }

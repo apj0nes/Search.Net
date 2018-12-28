@@ -4,8 +4,7 @@ namespace Search.Net
 {
     public struct DataLeaf<T>
     {
-        public DataLeaf(ushort Char)
-        {
+        public DataLeaf(ushort Char){
             this.Char = Char;
         }
 

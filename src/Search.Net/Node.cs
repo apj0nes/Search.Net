@@ -2,12 +2,11 @@
 {
     readonly public struct Node<T>
     {
-        public Node(ushort Char, Leaf<T>[] leaves)
-        {
-            this.Char = Char;
+        public Node(ref Leaf<T>[] leaves){
             Leaves = leaves;
         }
-        public ushort Char { get; }
-        public Leaf<T>[] Leaves { get; }
+        private Leaf<T>[] Leaves { get; }
+
+        public ref readonly Leaf<T> this[ushort Char] => ref Leaves[Char - 97];
     }
 }
