@@ -16,7 +16,7 @@ namespace Search.Net.Tests
                     var dataLeaves = new DataLeaf<int>[26];
                     for (char level3Char = 'a'; level3Char <= 'z'; level3Char++)
                     {
-                        dataLeaves[level3Char - 97] = new DataLeaf<int>(level3Char);
+                        dataLeaves[level3Char - 97] = new DataLeaf<int>();
                     }
                     leaves[level2Char - 97] = new Leaf<int>(ref dataLeaves);
                 }
@@ -24,10 +24,6 @@ namespace Search.Net.Tests
             }
 
             var trigramTree = new Root<int>(ref nodes);
-
-            var test = trigramTree['a']['a']['a'].Data;
-
-            trigramTree['a']['a']['a'].Data.Add(1);
 
             Assert.Contains(1, trigramTree['a']['a']['a'].Data);
         }

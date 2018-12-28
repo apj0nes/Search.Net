@@ -7,6 +7,7 @@
         }
 
         private DataLeaf<T>[] DataLeaves { get; }
+
         public ref readonly DataLeaf<T> this[ushort Char] => ref DataLeaves[Char - 97];
     }
 }
